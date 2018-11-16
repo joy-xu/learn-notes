@@ -7,11 +7,11 @@
 3. 开启 'Enable font ligatures' Font: Fira Code
 4. Help -> Productivity Guide 看下自己没有用哪些feature
 5. Help -> Keymap Reference
-6. 关闭Navigation Bar和Editor tabs
+6. **关闭Navigation Bar和Editor tabs**
 
 ### 跳转
 
-1. 编辑区/文件区跳转(Cmd+1, Esc, F4): Cmd+1: 跳转到Project视图, Cmd+7跳转到Structure视图,`Esc`或者`F4`后跳转到主窗口代码. **Hide All Windows(Cmd + Shift + F12)**
+1. 编辑区/文件区跳转(Cmd+1, Esc, F4): Cmd+1: 跳转到Project视图, Cmd+7跳转到Structure视图,`Esc`或者`F4`后跳转到主窗口代码. **Hide All Windows(Cmd + Shift + F12)**. **Distraction Free Mode(Ctrl + F12)**. `Shift + Esc`: 关闭当前视图. 
 2. 项目跳转
 	1. `Cdm + \``: Window -> Next Project Window
 	2. `Cmd + Shift + \`: Window -> Previous Project Window
@@ -44,15 +44,16 @@
 
 ### 精准搜索
  
-1. 类: `Cmd + O`, 根据类名定位类(ec可搜索出EdasConfig等类CamelCase, 也支持通配符*等), Navigate -> Class(可以加:number跳转到指定行, 比如Object:12)
-2. 文件: `Cmd + Shift + O`, 根据文件名定位文件(/开头可以进入文件夹), Navigate -> File(可以加:number跳转到指定行, 比如Object:12)
-3. 符号: `Cmd + Option + O`, 根据方法名定位方法(Object.wait可以通过Object.wait指定上下文定位), Navigate -> Symbol(可以加:number跳转到指定行, 比如Object:12)
+1. 类: `Cmd + O`, 根据类名定位类(ec可搜索出EdasConfig等类CamelCase, 也支持通配符*等), Navigate -> Class
+2. 文件: `Cmd + Shift + O`, 根据文件名定位文件(/开头可以进入文件夹), Navigate -> File
+3. 符号: `Cmd + Option + O`, 根据方法名定位方法(Object.wait可以通过Object.wait指定上下文(namespace)定位), Navigate -> Symbol
+4. 以上: 可以加:number跳转到指定行, 比如Object:12; `Shift + Enter`会在另一个窗口打开
 4. 字符串: `Cmd + Shift + F`, 根据关键字定位, Edit -> Find -> Find in Path
 5. Search Every: `Double Shift`, 可以使用Tab跳转不同的搜索区, 可以←查看搜索历史. #plugins设置插件, #editor设置编辑器...
 
 ### 代码助手
 
-1. live template: Live Templates(psvm, getlog等)
+1. live template: Live Templates(psvm, getlo, pic, psc等, 可以自定义). `Cmd + J`: 主动获取live templates
 2. postfix: Postfix Completion
 	1. .if
 	2. .var
@@ -82,6 +83,9 @@
 13. Run Inspection By Name: 显式调用Inspection定位代码(比如Questionable name)
 14. `Cmd + Option + L`: 格式化代码(可以选中某部分代码单独格式化)
 15. `Option + /`: Cyclic Expand Word(Hippie Completion)
+16. `Cmd + P`: Parameter Info, 提示方法参数(减少进入方法内部看参数的次数, new FileReader(Cmd+p提示参数)). `F1`: Quick Documentation, 打开文档
+17. `Cmd + Option + T`: Surround with, 选中代码后用if/try catch/while等surround
+18. `Option + 上箭头`: 选择代码
 
 ### 重构
 
@@ -99,6 +103,7 @@
 1. Annotate: 开启/关闭(右击行数显示/关闭)
 2. 撤销: `Cmd + Option + Z`: Revert
 3. local history: 
+4. **commit之前校验代码**
 
 ### 调试Debug
 
@@ -147,13 +152,16 @@
 1. `Ctrl + Option + N`: 在当前文件同一级目录下新建一个文件, New...
 2. `F5`: 复制当前文件, Refactor -> Copy
 3. `F6`: 移动当前文件, Refactor -> Move
+4. `Cmd + N`: 创建文件(Project window激活)
+5. `Ctrl + Option + N`: Create In This Directory(Project Window或者编辑区激活)
+6. Scratch File: 创建临时文件用来临时测试(比如测试某些工具类DateUtil)
 
 ### 文本操作
 1. `Cmd + c`: 复制文件名; `Cmd + Shift + c`: 复制完整路径
 2. 剪贴板: `Cmd + Shift + v`
 
 ### 结构图
-1. `Cmd + F12`: File Structure, 查看当前Filed、method大纲, Navigate -> File Structure
+1. `Cmd + F12`: File Structure, 查看当前Filed、method大纲(method), Navigate -> File Structure
 2. `Cmd + Option + Shift + U`: 查看maven依赖、类图, Show Diagram
 3. `Ctrl + Option + H`: 查看方法调用层次, Call Hierarchy
 
@@ -162,6 +170,7 @@
 1. settings -> Editor -> Font -> Font(Fira Code), Enable font ligatures
 2. 每一条Inspection检查都是可配置的, Setting -> Editor -> Inspections
 3. Enter Presentation Mode(Presentation模式)
-4. `Cmd + Shift + Arrow`: Stretch to Left/Right, 调整窗口大小
+4. `Cmd + Shift + Arrow`: Stretch to Left/Right/Up/Down, 调整窗口大小
 5. `Shift + Option + Mouse`: Multi cursor
+
 
