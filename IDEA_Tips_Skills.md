@@ -4,10 +4,10 @@
 
 1. `Cmd + Shift + A`: Help -> Find Action, 搜索对应操作, 如recent files、Rest Client等
 2. 安装`Key Promoter X`插件
-3. 开启 'Enable font ligatures' Font: Fira Code
 4. Help -> Productivity Guide 看下自己没有用哪些feature
 5. Help -> Keymap Reference
 6. **关闭Navigation Bar和Editor tabs**
+7. JetBrains ToolBox
 
 ### 跳转
 
@@ -16,7 +16,7 @@
 	1. `Cdm + \``: Window -> Next Project Window
 	2. `Cmd + Shift + \`: Window -> Previous Project Window
 3. 文件跳转
-	1. `Cmd + E` : Recent Files(也可以打开其他的window, 比如Spring/TODO window等)
+	1. `Cmd + E`: Recent Files(也可以打开其他的window, 比如Spring/TODO window等)
 	2. `Cmd + Shift + E`: Recent Changed Files
 4. 浏览/修改位置跳转
 	1. 修改位置跳转`Cmd + Shift + Delete`: Navigate -> Last Edit Location
