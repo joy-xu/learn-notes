@@ -164,7 +164,7 @@
 		3. 如果编辑的是一个不存在的目录/文件(<C-g>会提示[New File]状态), 如果是文件不存在可以直接:w保存, 如果目录不存在则无法保存. 可以借助:!mkdir -p %:h创建目录后再执行:w保存
 		
 
-	:find {file} : 通过文件名打开文件, 但必须提前设置好path选项的值(set path+=app/**)
+	:find {file} : 通过文件名打开文件, 但必须提前设置好path选项的值(:set path+=app/**, 查看path值 :set path?)
 	
 	Vim原生的文件管理器netrw(across NETwork Read and Write files), 确保vimrc中配置有set nocompatible以及filetype plugin on配置
 		vim {directory} 即可进入netrw管理的
@@ -266,7 +266,7 @@
 			:jumps : 查看跳转列表. <C-o>/<C-i>用于在跳转列表中遍历(<C-o>相当于后退, <C-i>相当于前进)
 		改变列表:
 			:changes : 查看改变列表. g; g, 用来在改变列表中反向/正向遍历改变列表(第一次g; 与 `. 效果相同)
-		gf : 跳转到光标下的文件名
+		gf : 跳转到光标下的文件名(go to file. 必要时要使用 :set suffixesadd+=.rb设置文件后缀名)
 		<C-]> : 跳转到光标下关键字的定义之处
 		
 删除:
@@ -351,6 +351,21 @@
 	    y0 : 复制到行首
 	    yH : 从当前行复制到屏幕顶端
 	    yL : 从当前行复制到屏幕低端
+
+模式: Vim的搜索引擎
+	设置大小写敏感:
+		全局: set ignorecase
+		每次查找设置: \C或者\c指定大小写敏感(\c忽略大小写, \C强制大小写敏感; 位置随意, 会作用于它之前的所有文本)
+		smartcase: :set smartcase(设置smartcase, 模式全部小写则不区分大小写, 模式包含大写则大小写敏感)
+	\v模式(very magic): 使用\v激活very magic搜索模式(假定除了字母、数字、下划线之外, 所有字符都具有特殊含义, 例如.、*等). \v#[0-9a-zA-Z]{3,6}
+	\V模式(very nomagic): 按原义查找(只有\有特殊含义, 屏蔽.、+、*等特殊含义). \Va.k.a
+	圆括号捕捉子匹配: 	
+	界定单词边界: /\v<the> : 只会查找到the, 不会找到these
+	界定匹配边界: \zs, \ze (/Practical \zsVim\ze : 只高亮Vim, 不包含Practical 
+	转义特殊问题字符: 正向(反向)查找需要转义/(?)字符, 每次都要转义\字符
+		
+		
+	
 
 Undo/Redo:
     u : 撤消上次命令(undo, 如果在插入模式中使用了<Up>、<Down>、<Left>、<Right>这些光标键, 将会产生个新的撤销块, 这也会对.命令的操作产生影响)
