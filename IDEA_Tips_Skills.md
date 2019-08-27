@@ -40,6 +40,7 @@
 11. `Double Shift`, 搜索navigation可以启用/禁用navigation bar, 建议禁用, 使用`Cmd + 上箭头`调出使用
 12. 分割屏幕: Split window horizontally/vertically: Window -> Editor Tabs, `Shift + F4`: Open source in new window, 在新窗口打开文件
 13. `Cmd + Shift + T`: 测试类跳转(也可以创建测试类)
+14. 当前类内方法查找: `Cmd + F12`: Navicate -> File Structure
 
 
 ### 精准搜索
