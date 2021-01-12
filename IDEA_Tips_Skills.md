@@ -6,8 +6,8 @@
 2. 安装`Key Promoter X`插件
 4. Help -> Productivity Guide 看下自己没有用哪些feature
 5. Help -> Keymap Reference
-6. **关闭Navigation Bar和Editor tabs**
-7. JetBrains ToolBox
+6. **关闭Navigation Bar和Editor tabs**, inefficiency for navigation
+7. JetBrains ToolBox, 可以设置heap size等
 
 ### 跳转
 
@@ -50,7 +50,7 @@
 3. 符号: `Cmd + Option + O`, 根据方法名定位方法(Object.wait可以通过Object.wait指定上下文(namespace)定位), Navigate -> Symbol
 4. 以上: 可以加:number跳转到指定行, 比如Object:12; `Shift + Enter`会在另一个窗口打开
 4. 字符串: `Cmd + Shift + F`, 根据关键字定位, Edit -> Find -> Find in Path
-5. Search Every: `Double Shift`, 可以使用Tab跳转不同的搜索区, 可以←查看搜索历史. #plugins设置插件, #editor设置编辑器...
+5. Search Every: `Double Shift`, 可以使用Tab跳转不同的搜索区, #plugins设置插件, #editor设置编辑器...
 
 ### 代码助手
 
@@ -76,7 +76,7 @@
 5. `Ctrl + Shift + Space`: Completion SmartType, 智能自动补全(只提示适用于此的补全代码)
 6. `Cmd + Shift + up/down`: move statement up/down, `Option + Shift + up/down`: move line up/down
 7. `Ctrl + Shift + J`: Join Lines, 合并两行(字符串)
-8. `Ctrl + Shift + P`: Expression Type, 显示表达式结果类型
+8. `Ctrl + Shift + P`: Expression Type, 显示表达式结果类型, 主要用于分析lambda表达式的类型
 9. Locate Duplicates: Analyze -> Locate Duplicates 分析重复代码
 10. Analyze -> Analyze Data Flow to/from Here, 定位set或者get该field值的代码
 11. Search Structurally: Edit -> Find 根据代码结构定位代码(搜索try catch坏味道代码). 可以添加到Inspections中, Editor -> Inspections开启Structure Search Inspection并添加Search Template或Replace Template(可以`Option Enter`给出intension)
